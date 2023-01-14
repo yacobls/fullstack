@@ -30,3 +30,29 @@ export const createPkp = async(req, res) =>{
         console.log(error.message);
     }
 }
+
+export const updatePkp = async(req, res) =>{
+    try {
+        await Pkp.update(req.body,{
+            where:{
+                id: req.params.id
+            }
+        });
+        res.status(200).json({msg: "Data Updated"});
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+export const deletePkp = async(req, res) =>{
+    try {
+        await Pkp.destroy({
+            where:{
+                id: req.params.id
+            }
+        });
+        res.status(200).json({msg: "Data Deleted"});
+    } catch (error) {
+        console.log(error.message);
+    }
+}
