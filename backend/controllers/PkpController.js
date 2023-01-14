@@ -21,3 +21,12 @@ export const getPkpById = async(req, res) =>{
         console.log(error.message);
     }
 }
+
+export const createPkp = async(req, res) =>{
+    try {
+        await Pkp.create(req.body);
+        res.status(201).json({msg: "Data Creadted"});
+    } catch (error) {
+        console.log(error.message);
+    }
+}

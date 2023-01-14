@@ -2,3 +2,23 @@ GET http://localhost:5000/pkp
 
 ###
 GET http://localhost:5000/pkp/1
+
+###
+POST http://localhost:5000/pkp
+Content-Type: application/json
+
+{
+    "npd_pkp": "UPPPD Pulo Gadung",
+    "kpd_pkp": "3175",
+    "nidp_pkp": "UPPPD Pulo Gadung",
+    "tr_pkp": "14-01-2023",
+    "tm_pkp": "14-01-2023",
+    "alamat_pkp": "Kantor Kecamatan Pulo Gadung, Jl. Raya Bekasi KM. 18, Pulo Gadung, Jakarta Timur",
+    "kota_pkp": "Jakarta Timur",
+    "kp_pkp": "13250",
+    "nki_pkp": "Kepala Instansi UPPPD Pulo Gadung",
+    "tlp_pkp": "02147884158",
+    "email_pkp": "upppd.pulogadung@jakarta.go.id",
+    "lpd_pkp": "Foto",
+    "fkidp_pkp": "Foto"
+}
