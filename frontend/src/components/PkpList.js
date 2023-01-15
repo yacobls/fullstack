@@ -14,6 +14,15 @@ const getPkp = async () =>{
     setPkp(response.data);
 };
 
+const deletePkp = async (id) =>{
+    try {
+        await axios.delete(`http://localhost:5000/pkp/${id}`);
+        getPkp();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
   return (
     <div className="columns mt-5 is-centered">
         <div className="column is-half">
@@ -57,7 +66,7 @@ const getPkp = async () =>{
                             <td>{pkp.fkipd_pkp}</td>
                             <td>
                                 <Link to={`edit/${pkp.id}`} className="button is-small is info">Edit</Link>
-                                <button className="button is-small is danger">Delete</button>
+                                <button onClick={()=> deletePkp(pkp.id)} className="button is-small is danger">Delete</button>
                             </td>
                         </tr>
                     ))}
