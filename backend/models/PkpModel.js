@@ -6,7 +6,7 @@ const {DataTypes} = Sequelize;
 const Pkp = db.define('pkp', {
     npd_pkp: DataTypes.STRING,
     kpd_pkp: DataTypes.INTEGER,
-    nidp_pkp: DataTypes.STRING,
+    nipd_pkp: DataTypes.STRING,
     tr_pkp: DataTypes.DATE,
     tm_pkp: DataTypes.DATE,
     alamat_pkp: DataTypes.STRING,
@@ -16,7 +16,7 @@ const Pkp = db.define('pkp', {
     tlp_pkp: DataTypes.INTEGER,
     email_pkp: DataTypes.STRING,
     lpd_pkp: DataTypes.STRING,
-    fkidp_pkp: DataTypes.STRING,
+    fkipd_pkp: DataTypes.STRING,
 },{
     freezeTableName:true
 });

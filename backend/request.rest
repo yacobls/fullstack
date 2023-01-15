@@ -9,18 +9,18 @@ Content-Type: application/json
 
 {
     "npd_pkp": "UPPPD Tebet",
-    "kpd_pkp": "3175",
-    "nidp_pkp": "UPPPD Pulo Gadung",
-    "tr_pkp": "14-01-2023",
-    "tm_pkp": "14-01-2023",
-    "alamat_pkp": "Kantor Kecamatan Pulo Gadung, Jl. Raya Bekasi KM. 18, Pulo Gadung, Jakarta Timur",
-    "kota_pkp": "Jakarta Timur",
-    "kp_pkp": "13250",
-    "nki_pkp": "Kepala Instansi UPPPD Pulo Gadung",
+    "kpd_pkp": "3015",
+    "nipd_pkp": "UPPPD Tebet",
+    "tr_pkp": "2023-01-15",
+    "tm_pkp": "2023-01-15",
+    "alamat_pkp": "Kantor Kecamatan Tebet Lt. 3, Jl. Prof. DR. Soepomo No.55C, Tebet, Jakarta Selatan",
+    "kota_pkp": "Jakarta Selatan",
+    "kp_pkp": "12810",
+    "nki_pkp": "Kepala Instansi UPPPD Tebet",
     "tlp_pkp": "02147884158",
-    "email_pkp": "upppd.pulogadung@jakarta.go.id",
+    "email_pkp": "upppd.tebet@jakarta.go.id",
     "lpd_pkp": "Foto",
-    "fkidp_pkp": "Foto"
+    "fkipd_pkp": "Foto"
 }
 
 ###
@@ -30,7 +30,7 @@ Content-Type: application/json
 {
     "npd_pkp": "UPPPD Pulo Gadung",
     "kpd_pkp": "3175",
-    "nidp_pkp": "UPPPD Pulo Gadung",
+    "nipd_pkp": "UPPPD Pulo Gadung",
     "tr_pkp": "2023-01-14",
     "tm_pkp": "2023-01-14",
     "alamat_pkp": "Kantor Kecamatan Pulo Gadung, Jl. Raya Bekasi KM. 18, Pulo Gadung, Jakarta Timur",
@@ -40,8 +40,8 @@ Content-Type: application/json
     "tlp_pkp": "02147884158",
     "email_pkp": "upppd.pulogadung@jakarta.go.id",
     "lpd_pkp": "Foto",
-    "fkidp_pkp": "Foto"
+    "fkipd_pkp": "Foto"
 }
 
 ###
-DELETE http://localhost:5000/pkp/3
+DELETE http://localhost:5000/pkp/5
