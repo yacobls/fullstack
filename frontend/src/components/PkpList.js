@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const PkpList = () => {
 const [pkp, setPkp] = useState([]);
@@ -16,6 +17,7 @@ const getPkp = async () =>{
   return (
     <div className="columns mt-5 is-centered">
         <div className="column is-half">
+            <Link to={`add`} className="button is-success">Add Pkp</Link>
             <table className="table is-striped is-fullwidth">
                 <thead>
                     <tr>
@@ -54,7 +56,7 @@ const getPkp = async () =>{
                             <td>{pkp.lpd_pkp}</td>
                             <td>{pkp.fkipd_pkp}</td>
                             <td>
-                                <button className="button is-small is info">Edit</button>
+                                <Link to={`edit/${pkp.id}`} className="button is-small is info">Edit</Link>
                                 <button className="button is-small is danger">Delete</button>
                             </td>
                         </tr>
