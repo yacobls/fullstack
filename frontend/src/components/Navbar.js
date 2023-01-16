@@ -3,8 +3,8 @@ import {Nav, Navbar, NavDropdown, Form, Button, Container} from 'react-bootstrap
 
 const NavbarComponent = () => {
     return (
-        <Navbar bg="light" expand="lg">
-            <Container fluid>
+        <Navbar variant="dark" expand="lg">
+            <Container>
                 <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
