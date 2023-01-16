@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Table from 'react-bootstrap/Table';
 
 const PkpList = () => {
 const [pkp, setPkp] = useState([]);
@@ -24,10 +25,9 @@ const deletePkp = async (id) =>{
 }
 
   return (
-    <div className="columns mt-5 is-centered">
-        <div className="column is-half">
-            <Link to={`add`} className="button is-success">Add Pkp</Link>
-            <table className="table is-striped is-fullwidth">
+    <div className="mt-5">
+        <div className="column">
+            <Table responsive>
                 <thead>
                     <tr>
                         <th>No</th>
@@ -71,7 +71,8 @@ const deletePkp = async (id) =>{
                         </tr>
                     ))}
                 </tbody>
-            </table>
+                <Link to={`add`} className="button is-success">Add Pkp</Link>
+            </Table>
         </div>
     </div>
   )
