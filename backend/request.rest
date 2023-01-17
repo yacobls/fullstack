@@ -104,3 +104,54 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/pwp/1
+
+//PPL
+
+###
+GET http://localhost:5000/ppl
+
+###
+GET http://localhost:5000/ppl/2
+
+###
+POST http://localhost:5000/ppl
+Content-Type: application/json
+
+{
+    "nip_ppl": "17",
+    "np_ppl": "Nicki",
+    "alamat_ppl": "Kantor Kecamatan Senen, Jl. Kramat Raya No. 114, Senen, Jakarta Pusat 10450",
+    "kel_ppl": "Senen",
+    "kec_ppl": "Jakarta Pusat",
+    "kp_ppl": "10450",
+    "nik_ppl": "263982736482938172",
+    "tr_ppl": "2023-01-17",
+    "tm_ppl": "2023-01-17",
+    "tlp_ppl": "081182736742",
+    "email_ppl": "nicki@gmail.com",
+    "foto_ktp_ppl": "Foto",
+    "pas_foto_ppl": "Foto"
+}
+
+###
+PATCH http://localhost:5000/ppl/1
+Content-Type: application/json
+
+{
+    "nip_ppl": "17",
+    "np_ppl": "Nicki",
+    "alamat_ppl": "Kantor Kecamatan Senen, Jl. Kramat Raya No. 114, Senen, Jakarta Pusat 10450",
+    "kel_ppl": "Senen",
+    "kec_ppl": "Jakarta Pusat",
+    "kp_ppl": "10450",
+    "nik_ppl": "263982736482938172",
+    "tr_ppl": "2023-01-17",
+    "tm_ppl": "2023-01-17",
+    "tlp_ppl": "081182736742",
+    "email_ppl": "nicki@gmail.com",
+    "foto_ktp_ppl": "Foto",
+    "pas_foto_ppl": "Foto"
+}
+
+###
+DELETE http://localhost:5000/ppl/1
