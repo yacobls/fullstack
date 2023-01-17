@@ -1,3 +1,5 @@
+//PKP
+
 GET http://localhost:5000/pkp
 
 ###
@@ -45,3 +47,60 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/pkp/5
+
+//PWP
+
+###
+GET http://localhost:5000/pwp
+
+###
+GET http://localhost:5000/pwp/2
+
+###
+POST http://localhost:5000/pwp
+Content-Type: application/json
+
+{
+    "np_pwp": "17345",
+    "nwp_pwp": "Yopita Sari",
+    "alamat_pwp": "JL.Contoh NO.56, Kecamatan Pulo Gadung, Pulo Gadung, Jakarta Timur",
+    "kel_pwp": "Pulo Gebang",
+    "kec_pwp": "Pulo Gadung",
+    "kp_pwp": "13250",
+    "npwdp_pwp": "123123123742",
+    "email_pwp": "yopita.sari@gmail.com",
+    "tr_pwp": "2023-01-17",
+    "tm_pwp": "2023-01-17",
+    "jumlah_outlet_pwp": "1",
+    "jenis_outlet_pwp": "Ruko",
+    "jenis_pajak_pwp": "Bangunan",
+    "logo_pwp": "Foto",
+    "ftdp_pwp": "Foto",
+    "si_pwp": "Foto"
+}
+
+###
+PATCH http://localhost:5000/pwp/1
+Content-Type: application/json
+
+{
+    "np_pwp": "17345",
+    "nwp_pwp": "Yopita Sari",
+    "alamat_pwp": "JL.Contoh NO.56, Kecamatan Pulo Gadung, Pulo Gadung, Jakarta Timur",
+    "kel_pwp": "Pulo Gebang",
+    "kec_pwp": "Pulo Gadung",
+    "kp_pwp": "13250",
+    "npwdp_pwp": "123123123742",
+    "email_pwp": "yopita.sari@gmail.com",
+    "tr_pwp": "2023-01-17",
+    "tm_pwp": "2023-01-17",
+    "jumlah_outlet_pwp": "1",
+    "jenis_outlet_pwp": "Ruko",
+    "jenis_pajak_pwp": "Bangunan",
+    "logo_pwp": "Foto",
+    "ftdp_pwp": "Foto",
+    "si_pwp": "Foto"
+}
+
+###
+DELETE http://localhost:5000/pwp/1
