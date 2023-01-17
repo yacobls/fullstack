@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import AddPkp from "./components/AddPkp";
 import EditPkp from "./components/EditPkp";
 import AddPwp from "./components/AddPwp";
+import EditPwp from "./components/EditPwp";
 import { List, Navbar } from "./components";
 import { Row, Col, Container } from "react-bootstrap";
 
@@ -26,6 +27,7 @@ function App() {
                   <Route path="editpkp/:id" element={<EditPkp />} />
 
                   <Route path="addpwp" element={<AddPwp />} />
+                  <Route path="editpwp/:id" element={<EditPwp />} />
                 </Routes>
               </Row>
             </Col>
