@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import AddPkp from "./components/AddPkp";
 import EditPkp from "./components/EditPkp";
+import AddPwp from "./components/AddPwp";
 import { List, Navbar } from "./components";
 import { Row, Col, Container } from "react-bootstrap";
 
@@ -21,8 +22,10 @@ function App() {
               <Row>
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="add" element={<AddPkp />} />
-                  <Route path="edit/:id" element={<EditPkp />} />
+                  <Route path="addpkp" element={<AddPkp />} />
+                  <Route path="editpkp/:id" element={<EditPkp />} />
+
+                  <Route path="addpwp" element={<AddPwp />} />
                 </Routes>
               </Row>
             </Col>

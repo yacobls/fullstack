@@ -58,6 +58,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Kode Pemerintah Daerah</label>
             <div className="control">
@@ -70,6 +71,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Nomenklatur Instansi Pajak Daerah</label>
             <div className="control">
@@ -82,6 +84,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Alamat</label>
             <div className="control">
@@ -94,6 +97,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Kota/Kab</label>
             <div className="control">
@@ -106,18 +110,20 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Kode Pos</label>
             <div className="control">
               <input
-                type="text"
+                type="number"
                 className="input"
                 value={kp_pkp}
                 onChange={(e) => setKp_pkp(e.target.value)}
-                placeholder="Kota/Kab"
+                placeholder="Kode Pos"
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Tanggal Rekam</label>
             <div className="control">
@@ -130,6 +136,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Tanggal Mutakhir</label>
             <div className="control">
@@ -142,6 +149,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Nama Kepala Instansi</label>
             <div className="control">
@@ -154,11 +162,12 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Nomor Telepon</label>
             <div className="control">
               <input
-                type="text"
+                type="number"
                 className="input"
                 value={tlp_pkp}
                 onChange={(e) => setTlp_pkp(e.target.value)}
@@ -166,6 +175,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Alamat Email</label>
             <div className="control">
@@ -178,6 +188,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Logo Pemerintah Daerah</label>
             <div className="control">
@@ -190,6 +201,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+
           <div className="field">
             <label className="label">Foto Kantor Instansi Pajak Daerah</label>
             <div className="control">
@@ -202,6 +214,7 @@ const AddPkp = () => {
               />
             </div>
           </div>
+          
           <div className="field">
             <button type="submit" className="button is-success">
               Save
