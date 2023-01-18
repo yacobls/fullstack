@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const AddPkp = () => {
   const [npd_pkp, setNpd_pkp] = useState("");
@@ -53,9 +53,16 @@ const AddPkp = () => {
         <div className="column is-half">
           <Form onSubmit={savePkp}>
             <Row className="mb-3">
-              <Card.Header><h4><strong>Instansi Pajak Daerah</strong></h4></Card.Header>
-              <Col><br />
-                <Form.Label className="label"><strong>Nama Pemerintah Daerah</strong></Form.Label>
+              <Card.Header>
+                <h4>
+                  <strong>Instansi Pajak Daerah</strong>
+                </h4>
+              </Card.Header>
+              <Col>
+                <br />
+                <Form.Label className="label">
+                  <strong>Nama Pemerintah Daerah</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -65,8 +72,11 @@ const AddPkp = () => {
                 />
               </Col>
 
-              <Col><br />
-                <Form.Label className="label"><strong>Kode Pemerintah Daerah</strong></Form.Label>
+              <Col>
+                <br />
+                <Form.Label className="label">
+                  <strong>Kode Pemerintah Daerah</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -77,7 +87,9 @@ const AddPkp = () => {
               </Col>
             </Row>
 
-            <Form.Label className="label"><strong>Nomenklatur Instansi Pajak Daerah</strong></Form.Label>
+            <Form.Label className="label">
+              <strong>Nomenklatur Instansi Pajak Daerah</strong>
+            </Form.Label>
             <Form.Control
               type="text"
               className="input"
@@ -88,7 +100,9 @@ const AddPkp = () => {
 
             <Row className="mt-3">
               <Col>
-                <Form.Label className="label"><strong>Tanggal Rekam</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Tanggal Rekam</strong>
+                </Form.Label>
                 <Form.Control
                   type="date"
                   className="input"
@@ -99,7 +113,9 @@ const AddPkp = () => {
               </Col>
 
               <Col>
-                <Form.Label className="label"><strong>Tanggal Mutakhir</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Tanggal Mutakhir</strong>
+                </Form.Label>
                 <Form.Control
                   type="date"
                   className="input"
@@ -112,7 +128,9 @@ const AddPkp = () => {
 
             <Row className="mt-3">
               <Form.Group as={Col}>
-                <Form.Label className="label"><strong>Alamat</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Alamat</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -123,7 +141,9 @@ const AddPkp = () => {
               </Form.Group>
 
               <Form.Group as={Col}>
-                <Form.Label className="label"><strong>Kota/Kab</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Kota/Kab</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -134,7 +154,9 @@ const AddPkp = () => {
               </Form.Group>
 
               <Form.Group as={Col}>
-                <Form.Label className="label"><strong>Kode Pos</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Kode Pos</strong>
+                </Form.Label>
                 <Form.Control
                   type="number"
                   className="input"
@@ -146,9 +168,16 @@ const AddPkp = () => {
             </Row>
 
             <Row className="mb-3">
-              <Card.Header className="mt-3"><h4><strong>Pimpinan Instansi Pajak Daerah</strong></h4></Card.Header>
-              <Col><br />
-                <Form.Label className="label"><strong>Nama Kepala Instansi</strong></Form.Label>
+              <Card.Header className="mt-3">
+                <h4>
+                  <strong>Pimpinan Instansi Pajak Daerah</strong>
+                </h4>
+              </Card.Header>
+              <Col>
+                <br />
+                <Form.Label className="label">
+                  <strong>Nama Kepala Instansi</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -161,7 +190,9 @@ const AddPkp = () => {
 
             <Row className="mt-3">
               <Form.Group as={Col}>
-                <Form.Label className="label"><strong>Nomor Telepon</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Nomor Telepon</strong>
+                </Form.Label>
                 <Form.Control
                   type="number"
                   className="input"
@@ -171,7 +202,9 @@ const AddPkp = () => {
                 />
               </Form.Group>
               <Form.Group as={Col}>
-                <Form.Label className="label"><strong>Alamat Email</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Alamat Email</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -184,7 +217,9 @@ const AddPkp = () => {
 
             <Row className="mt-3">
               <Col>
-                <Form.Label className="label"><strong>Logo Pemerintah Daerah</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Logo Pemerintah Daerah</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -197,7 +232,9 @@ const AddPkp = () => {
 
             <Row className="mt-3">
               <Col>
-                <Form.Label className="label"><strong>Foto Kantor Instansi Pajak Daerah</strong></Form.Label>
+                <Form.Label className="label">
+                  <strong>Foto Kantor Instansi Pajak Daerah</strong>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
@@ -215,7 +252,6 @@ const AddPkp = () => {
                 </Button>
               </Col>
             </Row>
-
           </Form>
         </div>
       </div>
