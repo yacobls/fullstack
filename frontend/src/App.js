@@ -6,6 +6,7 @@ import EditPkp from "./components/EditPkp";
 import AddPwp from "./components/AddPwp";
 import EditPwp from "./components/EditPwp";
 import AddPpl from "./components/AddPpl";
+import AddPafe from "./components/AddPafe";
 import TabWajibPajak from "./components/TabWajibPajak";
 import TabDashboard from "./components/TabDashboard";
 import { List, Navbar } from "./components";
@@ -37,6 +38,8 @@ function App() {
                   <Route path="addppl" element={<AddPpl />} />
 
                   <Route path="TabDashboard" element={<TabDashboard />} />
+
+                  <Route path="addpafe" element={<AddPafe />} />
                 </Routes>
               </Row>
             </Col>
