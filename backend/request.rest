@@ -155,3 +155,56 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/ppl/1
+
+//PAFE
+
+###
+GET http://localhost:5000/pafe
+
+###
+GET http://localhost:5000/pafe/1
+
+###
+POST http://localhost:5000/pafe
+Content-Type: application/json
+
+{
+    "nwp_pafe": "Joserizar",
+    "no_pafe": "Outlet TGN",
+    "oi_pafe": "17",
+    "ja_pafe": "Tapping Box",
+    "afe_pafe": "Ts-108",
+    "ip_pafe": "192.168.38.1.",
+    "ai_pafe": "171",
+    "tr_pafe": "2023-01-24",
+    "tm_pafe": "2023-01-24",
+    "longitude_pafe": "106.87780701072914",
+    "latitude_pafe": "-6.171625895730746",
+    "fpa_pafe": "Foto",
+    "fsna_pafe": "Foto",
+    "sn_pafe": "Foto"
+}
+
+###
+PATCH http://localhost:5000/pafe/1
+Content-Type: application/json
+
+{
+    "nwp_pafe": "Joserizar",
+    "no_pafe": "TGN",
+    "oi_pafe": "17",
+    "ja_pafe": "Tapping Box",
+    "afe_pafe": "Ts-108",
+    "ip_pafe": "192.168.38.1.",
+    "ai_pafe": "171",
+    "tr_pafe": "2023-01-24",
+    "tm_pafe": "2023-01-24",
+    "longitude_pafe": "106.87780701072914",
+    "latitude_pafe": "-6.171625895730746",
+    "fpa_pafe": "Foto",
+    "fsna_pafe": "Foto",
+    "sn_pafe": "Foto"
+}
+
+###
+DELETE http://localhost:5000/pafe/1
