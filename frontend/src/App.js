@@ -7,6 +7,7 @@ import AddPwp from "./components/AddPwp";
 import EditPwp from "./components/EditPwp";
 import AddPpl from "./components/AddPpl";
 import TabWajibPajak from "./components/TabWajibPajak";
+import TabDashboard from "./components/TabDashboard";
 import { List, Navbar } from "./components";
 import { Row, Col, Container } from "react-bootstrap";
 
@@ -34,6 +35,8 @@ function App() {
                   <Route path="TabWajibPajak" element={<TabWajibPajak />} />
 
                   <Route path="addppl" element={<AddPpl />} />
+
+                  <Route path="TabDashboard" element={<TabDashboard />} />
                 </Routes>
               </Row>
             </Col>

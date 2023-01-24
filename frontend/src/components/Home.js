@@ -9,7 +9,7 @@ export default class Home extends Component {
                     <Button className='btn-home-menu' href="addpkp">Kantor Pajak</Button>
                     <Button className='btn-home-menu' href="addpwp">Wajib Pajak</Button>
                     <Button className='btn-home-menu' href="addppl">Petugas Lapangan</Button>
-                    <ListGroup.Item>Persetujuan</ListGroup.Item>
+                    <Button className='btn-home-menu' href="#">Persetujuan</Button>
                 </ListGroup>
             </Col>
         )

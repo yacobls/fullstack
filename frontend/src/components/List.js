@@ -10,7 +10,7 @@ export default class List extends Component {
                 <hr />
                 <ListGroup>
                     <Button className='btn-page-menu' href="/">Pelayanan</Button>
-                    <Button className='btn-page-menu'>Dashboard</Button>
+                    <Button className='btn-page-menu' href="TabDashboard">Dashboard</Button>
                     <Button className='btn-page-menu' href="editpkp/6">Kantor Pajak</Button>
                     <Button className='btn-page-menu' href="TabWajibPajak">Wajib Pajak</Button>
                     <Button className='btn-page-menu'>Alat Fiskal Elektronik</Button>

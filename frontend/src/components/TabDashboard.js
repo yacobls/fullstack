@@ -1,22 +1,21 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import EditPwp from "./EditPwp";
 
 function JustifiedExample() {
   return (
     <Tabs
-      defaultActiveKey="Wajib Pajak"
+      defaultActiveKey="Dashboard"
       id="justify-tab-example"
       className="mb-3"
       justify
     >
-      <Tab eventKey="Wajib Pajak" title="Wajib Pajak">
-        <EditPwp/>{/* <Sonnet /> */}
-      </Tab>
-      <Tab eventKey="Outlet" title="Outlet">
+      <Tab eventKey="Dashboard" title="Dashboard">
         {/* <Sonnet /> */}
       </Tab>
       <Tab eventKey="Transaksi" title="Transaksi">
+        {/* <Sonnet /> */}
+      </Tab>
+      <Tab eventKey="Perhatian Khusus" title="Perhatian Khusus">
         {/* <Sonnet /> */}
       </Tab>
     </Tabs>
