@@ -9,12 +9,12 @@ export default class List extends Component {
                 <h4><strong>Page Menu</strong></h4>
                 <hr />
                 <ListGroup>
-                    <ListGroup.Item>Pelayanan</ListGroup.Item>
-                    <ListGroup.Item>Dashboard</ListGroup.Item>
+                    <Button className='btn-page-menu' href="/">Pelayanan</Button>
+                    <Button className='btn-page-menu'>Dashboard</Button>
                     <Button className='btn-page-menu' href="editpkp/6">Kantor Pajak</Button>
-                    <Button className='btn-page-menu' href="editpwp/3">Wajib Pajak</Button>
-                    <ListGroup.Item>Alat Fiskal Elektronik</ListGroup.Item>
-                    <ListGroup.Item>Pelaporan</ListGroup.Item>
+                    <Button className='btn-page-menu' href="TabWajibPajak">Wajib Pajak</Button>
+                    <Button className='btn-page-menu'>Alat Fiskal Elektronik</Button>
+                    <Button className='btn-page-menu'>Pelaporan</Button>
                 </ListGroup>
             </Col>
         )

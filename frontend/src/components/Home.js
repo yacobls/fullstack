@@ -6,12 +6,10 @@ export default class Home extends Component {
         return (
             <Col>
                 <ListGroup>
-                    <ListGroup.Item>Pelayanan</ListGroup.Item>
-                    <ListGroup.Item>Dashboard</ListGroup.Item>
                     <Button className='btn-home-menu' href="addpkp">Kantor Pajak</Button>
                     <Button className='btn-home-menu' href="addpwp">Wajib Pajak</Button>
-                    <ListGroup.Item>Alat Fiskal Elektronik</ListGroup.Item>
-                    <ListGroup.Item>Pelaporan</ListGroup.Item>
+                    <Button className='btn-home-menu' href="addppl">Petugas Lapangan</Button>
+                    <ListGroup.Item>Persetujuan</ListGroup.Item>
                 </ListGroup>
             </Col>
         )
