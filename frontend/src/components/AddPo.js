@@ -7,45 +7,43 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const AddPwp = () => {
-  const [np_pwp, setNp_pwp] = useState("");
-  const [nwp_pwp, setNwp_pwp] = useState("");
-  const [alamat_pwp, setAlamat_pwp] = useState("");
-  const [kel_pwp, setKel_pwp] = useState("");
-  const [kec_pwp, setKec_pwp] = useState("");
-  const [kp_pwp, setKp_pwp] = useState("");
-  const [npwdp_pwp, setNpwdp_pwp] = useState("");
-  const [email_pwp, setEmail_pwp] = useState("");
-  const [tr_pwp, setTr_pwp] = useState("");
-  const [tm_pwp, setTm_pwp] = useState("");
-  const [jumlah_outlet_pwp, setJumlah_outlet_pwp] = useState("");
-  const [jenis_outlet_pwp, setJenis_outlet_pwp] = useState("");
-  const [jenis_pajak_pwp, setJenis_pajak_pwp] = useState("");
-  const [logo_pwp, setLogo_pwp] = useState("");
-  const [ftdp_pwp, setFtdp_pwp] = useState("");
-  const [si_pwp, setSi_pwp] = useState("");
+const AddPo = () => {
+  const [nwp_po, setNwp_po] = useState("");
+  const [no_po, setNo_po] = useState("");
+  const [oi_po, setOi_po] = useState("");
+  const [alamat_po, setAlamat_po] = useState("");
+  const [kec_po, setKec_po] = useState("");
+  const [kel_po, setKel_po] = useState("");
+  const [kp_po, setKp_po] = useState("");
+  const [nama_pic_outlet, setNama_pic_outlet] = useState("");
+  const [email_pic_outlet, setEmail_pic_outlet] = useState("");
+  const [tlp_pic_outlet, setTlp_pic_outlet] = useState("");
+  const [tr_po, setTr_po] = useState("");
+  const [tm_po, setTm_po] = useState("");
+  const [fio_po, setFio_po] = useState("");
+  const [ftdo_po, setFtdo_po] = useState("");
+  const [si_po, setSi_po] = useState("");
   const navigate = useNavigate();
 
-  const savePwp = async (e) => {
+  const savePo = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/pwp", {
-        np_pwp,
-        nwp_pwp,
-        alamat_pwp,
-        kel_pwp,
-        kec_pwp,
-        kp_pwp,
-        npwdp_pwp,
-        email_pwp,
-        tr_pwp,
-        tm_pwp,
-        jumlah_outlet_pwp,
-        jenis_outlet_pwp,
-        jenis_pajak_pwp,
-        logo_pwp,
-        ftdp_pwp,
-        si_pwp,
+      await axios.post("http://localhost:5000/po", {
+        nwp_po,
+        no_po,
+        oi_po,
+        alamat_po,
+        kec_po,
+        kel_po,
+        kp_po,
+        nama_pic_outlet,
+        email_pic_outlet,
+        tlp_pic_outlet,
+        tr_po,
+        tm_po,
+        fio_po,
+        ftdo_po,
+        si_po,
       });
       navigate("/");
     } catch (error) {
@@ -55,56 +53,54 @@ const AddPwp = () => {
 
   return (
     <div className="card mb-3">
-      <div className="columns">
+      <div className="columns p-3">
         <div className="column is-half">
-          <Form onSubmit={savePwp}>
+          <Form onSubmit={savePo}>
             <Row className="mb-3">
               <Card.Header>
                 <h4>
-                  <strong>Data Wajib Pajak</strong>
+                  <strong>Data Outlet</strong>
                 </h4>
               </Card.Header>
               <Col>
                 <br />
                 <Form.Label className="label">
-                  <strong>Nomor Pelayanan</strong>
+                  <strong>Nama Wajib Pajak</strong>
                 </Form.Label>
-                <Form.Control
-                  type="number"
-                  className="input"
-                  value={np_pwp}
-                  onChange={(e) => setNp_pwp(e.target.value)}
-                  placeholder="Nomor Pelayanan"
-                />
-              </Col>
-            </Row>
-
-            <Row className="mb-3">
-              <Form.Label className="label">
-                <strong>Nama Wajib Pajak</strong>
-              </Form.Label>
-              <Col>
                 <Form.Control
                   type="text"
                   className="input"
-                  value={nwp_pwp}
-                  onChange={(e) => setNwp_pwp(e.target.value)}
+                  value={nwp_po}
+                  onChange={(e) => setNwp_po(e.target.value)}
                   placeholder="Nama Wajib Pajak"
                 />
               </Col>
             </Row>
 
-            <Row className="mb-3">
-              <Form.Label className="label">
-                <strong>Alamat Wajib Pajak</strong>
-              </Form.Label>
+            <Row className="mt-3">
               <Col>
+                <Form.Label className="label">
+                  <strong>Nama Outlet</strong>
+                </Form.Label>
                 <Form.Control
-                  type="text"
+                  type="date"
                   className="input"
-                  value={alamat_pwp}
-                  onChange={(e) => setAlamat_pwp(e.target.value)}
-                  placeholder="Alamat Wajib Pajak"
+                  value={no_po}
+                  onChange={(e) => setNo_po(e.target.value)}
+                  placeholder="Nama Outlet"
+                />
+              </Col>
+
+              <Col>
+                <Form.Label className="label">
+                  <strong>Outlet ID</strong>
+                </Form.Label>
+                <Form.Control
+                  type="date"
+                  className="input"
+                  value={oi_po}
+                  onChange={(e) => setOi_po(e.target.value)}
+                  placeholder="Outlet ID"
                 />
               </Col>
             </Row>
@@ -112,17 +108,19 @@ const AddPwp = () => {
             <Row className="mt-3">
               <Form.Group as={Col}>
                 <Form.Label className="label">
-                  <strong>Kelurahan</strong>
+                  <strong>Alamat</strong>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
-                  value={kel_pwp}
-                  onChange={(e) => setKel_pwp(e.target.value)}
-                  placeholder="Kelurahan"
+                  value={alamat_po}
+                  onChange={(e) => setAlamat_po(e.target.value)}
+                  placeholder="Alamat"
                 />
               </Form.Group>
+            </Row>
 
+            <Row className="mt-3">
               <Form.Group as={Col}>
                 <Form.Label className="label">
                   <strong>Kecamatan</strong>
@@ -130,9 +128,22 @@ const AddPwp = () => {
                 <Form.Control
                   type="text"
                   className="input"
-                  value={kec_pwp}
-                  onChange={(e) => setKec_pwp(e.target.value)}
+                  value={kec_po}
+                  onChange={(e) => setKec_po(e.target.value)}
                   placeholder="Kecamatan"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Kelurahan</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={kel_po}
+                  onChange={(e) => setKel_po(e.target.value)}
+                  placeholder="Kelurahan"
                 />
               </Form.Group>
 
@@ -143,106 +154,9 @@ const AddPwp = () => {
                 <Form.Control
                   type="number"
                   className="input"
-                  value={kp_pwp}
-                  onChange={(e) => setKp_pwp(e.target.value)}
+                  value={kp_po}
+                  onChange={(e) => setKp_po(e.target.value)}
                   placeholder="Kode Pos"
-                />
-              </Form.Group>
-            </Row>
-
-            <Row className="mt-3">
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>NPWDP</strong>
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  className="input"
-                  value={npwdp_pwp}
-                  onChange={(e) => setNpwdp_pwp(e.target.value)}
-                  placeholder="NPWDP"
-                />
-              </Form.Group>
-
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>Email</strong>
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  className="input"
-                  value={email_pwp}
-                  onChange={(e) => setEmail_pwp(e.target.value)}
-                  placeholder="Email"
-                />
-              </Form.Group>
-            </Row>
-
-            <Row className="mt-3">
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>Tanggal Rekam</strong>
-                </Form.Label>
-                <Form.Control
-                  type="date"
-                  className="input"
-                  value={tr_pwp}
-                  onChange={(e) => setTr_pwp(e.target.value)}
-                  placeholder="Tanggal Rekam"
-                />
-              </Form.Group>
-
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>Tanggal Mutakhir</strong>
-                </Form.Label>
-                <Form.Control
-                  type="date"
-                  className="input"
-                  value={tm_pwp}
-                  onChange={(e) => setTm_pwp(e.target.value)}
-                  placeholder="Tanggal Mutakhir"
-                />
-              </Form.Group>
-            </Row>
-
-            <Row className="mt-3">
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>Jumlah Outlet</strong>
-                </Form.Label>
-                <Form.Control
-                  type="number"
-                  className="input"
-                  value={jumlah_outlet_pwp}
-                  onChange={(e) => setJumlah_outlet_pwp(e.target.value)}
-                  placeholder="Jumlah Outlet"
-                />
-              </Form.Group>
-
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>Jenis Outlet</strong>
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  className="input"
-                  value={jenis_outlet_pwp}
-                  onChange={(e) => setJenis_outlet_pwp(e.target.value)}
-                  placeholder="Jenis Outlet"
-                />
-              </Form.Group>
-
-              <Form.Group as={Col}>
-                <Form.Label className="label">
-                  <strong>Jenis Pajak</strong>
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  className="input"
-                  value={jenis_pajak_pwp}
-                  onChange={(e) => setJenis_pajak_pwp(e.target.value)}
-                  placeholder="Jenis Pajak"
                 />
               </Form.Group>
             </Row>
@@ -250,14 +164,83 @@ const AddPwp = () => {
             <Row className="mt-3">
               <Col>
                 <Form.Label className="label">
-                  <strong>Logo</strong>
+                  <strong>Tanggal Rekam</strong>
+                </Form.Label>
+                <Form.Control
+                  type="date"
+                  className="input"
+                  value={tr_po}
+                  onChange={(e) => setTr_po(e.target.value)}
+                  placeholder="Tanggal Rekam"
+                />
+              </Col>
+
+              <Col>
+                <Form.Label className="label">
+                  <strong>Tanggal Mutakhir</strong>
+                </Form.Label>
+                <Form.Control
+                  type="date"
+                  className="input"
+                  value={tm_po}
+                  onChange={(e) => setTm_po(e.target.value)}
+                  placeholder="Tanggal Mutakhir"
+                />
+              </Col>
+            </Row>
+
+            <Row className="mt-3">
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Nama PIC Outlet</strong>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
-                  value={logo_pwp}
-                  onChange={(e) => setLogo_pwp(e.target.value)}
-                  placeholder="Logo"
+                  value={nama_pic_outlet}
+                  onChange={(e) => setNama_pic_outlet(e.target.value)}
+                  placeholder="Nama PIC Outlet"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Email PIC Outlet</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={email_pic_outlet}
+                  onChange={(e) => setEmail_pic_outlet(e.target.value)}
+                  placeholder="Email PIC Outlet"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Hp PIC Outlet Pos</strong>
+                </Form.Label>
+                <Form.Control
+                  type="number"
+                  className="input"
+                  value={tlp_pic_outlet}
+                  onChange={(e) => setTlp_pic_outlet(e.target.value)}
+                  placeholder="Hp PIC Outlet Pos"
+                />
+              </Form.Group>
+            </Row>
+
+            <Row className="mt-3">
+              <Col>
+                <Form.Label className="label">
+                  <strong>Foto Interior Outlet</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={fio_po}
+                  onChange={(e) => setFio_po(e.target.value)}
+                  placeholder="Foto Interior Outlet"
                 />
               </Col>
             </Row>
@@ -265,14 +248,14 @@ const AddPwp = () => {
             <Row className="mt-3">
               <Col>
                 <Form.Label className="label">
-                  <strong>Foto Tampak Depan Kantor</strong>
+                  <strong>Foto Tampak Depan Outlet</strong>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   className="input"
-                  value={ftdp_pwp}
-                  onChange={(e) => setFtdp_pwp(e.target.value)}
-                  placeholder="Foto Tampak Depan Kantor"
+                  value={ftdo_po}
+                  onChange={(e) => setFtdo_po(e.target.value)}
+                  placeholder="Foto Tampak Depan Outlet"
                 />
               </Col>
             </Row>
@@ -285,8 +268,8 @@ const AddPwp = () => {
                 <Form.Control
                   type="text"
                   className="input"
-                  value={si_pwp}
-                  onChange={(e) => setSi_pwp(e.target.value)}
+                  value={si_po}
+                  onChange={(e) => setSi_po(e.target.value)}
                   placeholder="Surat Izin"
                 />
               </Col>
@@ -295,7 +278,11 @@ const AddPwp = () => {
             <Row className="mb-3 mt-3">
               <Col>
                 <Button type="submit" className="button is-success">
-                  Save
+                  Buat Outlet
+                </Button>
+
+                <Button type="submit" className="button is-success">
+                  Send
                 </Button>
               </Col>
             </Row>
@@ -306,4 +293,4 @@ const AddPwp = () => {
   );
 };
 
-export default AddPwp;
+export default AddPo;

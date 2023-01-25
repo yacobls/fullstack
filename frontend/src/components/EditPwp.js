@@ -79,7 +79,7 @@ const EditPwp = () => {
   };
 
   return (
-    <div className="card">
+    <div className="card mb-3">
       <div className="columns">
         <div className="column p-3">
           <Form onSubmit={updatePwp}>

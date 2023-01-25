@@ -48,7 +48,7 @@ const AddPkp = () => {
   };
 
   return (
-    <div className="card">
+    <div className="card mb-3">
       <div className="columns">
         <div className="column is-half">
           <Form onSubmit={savePkp}>

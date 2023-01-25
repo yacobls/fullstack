@@ -8,6 +8,7 @@ import AddPwp from "./components/AddPwp";
 import EditPwp from "./components/EditPwp";
 import AddPpl from "./components/AddPpl";
 import AddPafe from "./components/AddPafe";
+import AddPo from "./components/AddPo";
 import TabWajibPajak from "./components/TabWajibPajak";
 import TabDashboard from "./components/TabDashboard";
 import { List, Navbar } from "./components";
@@ -43,6 +44,8 @@ function App() {
                   <Route path="TabDashboard" element={<TabDashboard />} />
 
                   <Route path="addpafe" element={<AddPafe />} />
+
+                  <Route path="addpo" element={<AddPo />} />
                 </Routes>
               </Row>
             </Col>
