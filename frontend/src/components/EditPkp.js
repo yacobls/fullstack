@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const EditPkp = () => {
   const [npd_pkp, setNpd_pkp] = useState("");
@@ -65,171 +70,212 @@ const EditPkp = () => {
   };
 
   return (
-    <div className="columns mt-5 is-centered">
-      <div className="column is-half">
-        <form onSubmit={updatePkp}>
-          <div className="field">
-            <label className="label">Nama Pemerintah Daerah</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={npd_pkp}
-                onChange={(e) => setNpd_pkp(e.target.value)}
-                placeholder="Nama Pemerintah Daerah"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Kode Pemerintah Daerah</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={kpd_pkp}
-                onChange={(e) => setKpd_pkp(e.target.value)}
-                placeholder="Kode Pemerintah Daerah"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Nomenklatur Instansi Pajak Daerah</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={nipd_pkp}
-                onChange={(e) => setNipd_pkp(e.target.value)}
-                placeholder="Nomenklatur Instansi Pajak Daerah"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Alamat</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={alamat_pkp}
-                onChange={(e) => setAlamat_pkp(e.target.value)}
-                placeholder="Alamat"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Kota/Kab</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={kota_pkp}
-                onChange={(e) => setKota_pkp(e.target.value)}
-                placeholder="Kota/Kab"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Kode Pos</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={kp_pkp}
-                onChange={(e) => setKp_pkp(e.target.value)}
-                placeholder="Kota/Kab"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Tanggal Rekam</label>
-            <div className="control">
-              <input
-                type="date"
-                className="input"
-                value={tr_pkp}
-                onChange={(e) => setTr_pkp(e.target.value)}
-                placeholder="Tanggal Rekam"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Tanggal Mutakhir</label>
-            <div className="control">
-              <input
-                type="date"
-                className="input"
-                value={tm_pkp}
-                onChange={(e) => setTm_pkp(e.target.value)}
-                placeholder="Tanggal Mutakhir"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Nama Kepala Instansi</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={nki_pkp}
-                onChange={(e) => setNki_pkp(e.target.value)}
-                placeholder="Nama Kepala Instansi"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Nomor Telepon</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={tlp_pkp}
-                onChange={(e) => setTlp_pkp(e.target.value)}
-                placeholder="Nomor Telepon"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Alamat Email</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={email_pkp}
-                onChange={(e) => setEmail_pkp(e.target.value)}
-                placeholder="Alamat Email"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Logo Pemerintah Daerah</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={lpd_pkp}
-                onChange={(e) => setLpd_pkp(e.target.value)}
-                placeholder="Logo Pemerintah Daerah"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Foto Kantor Instansi Pajak Daerah</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={fkipd_pkp}
-                onChange={(e) => setFkipd_pkp(e.target.value)}
-                placeholder="Foto Kantor Instansi Pajak Daerah"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <button type="submit" className="button is-success">
-              Update
-            </button>
-          </div>
-        </form>
+    <div className="card">
+      <div className="columns">
+        <div className="column is-half">
+          <Form onSubmit={updatePkp}>
+            <Row className="mb-3">
+              <Card.Header>
+                <h4>
+                  <strong>Instansi Pajak Daerah</strong>
+                </h4>
+              </Card.Header>
+              <Col>
+                <br />
+                <Form.Label className="label">
+                  <strong>Nama Pemerintah Daerah</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={npd_pkp}
+                  onChange={(e) => setNpd_pkp(e.target.value)}
+                  placeholder="Nama Pemerintah Daerah"
+                />
+              </Col>
+
+              <Col>
+                <br />
+                <Form.Label className="label">
+                  <strong>Kode Pemerintah Daerah</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={kpd_pkp}
+                  onChange={(e) => setKpd_pkp(e.target.value)}
+                  placeholder="Kode Pemerintah Daerah"
+                />
+              </Col>
+            </Row>
+
+            <Form.Label className="label">
+              <strong>Nomenklatur Instansi Pajak Daerah</strong>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              className="input"
+              value={nipd_pkp}
+              onChange={(e) => setNipd_pkp(e.target.value)}
+              placeholder="Nomenklatur Instansi Pajak Daerah"
+            />
+
+            <Row className="mt-3">
+              <Col>
+                <Form.Label className="label">
+                  <strong>Tanggal Rekam</strong>
+                </Form.Label>
+                <Form.Control
+                  type="date"
+                  className="input"
+                  value={tr_pkp}
+                  onChange={(e) => setTr_pkp(e.target.value)}
+                  placeholder="Tanggal Rekam"
+                />
+              </Col>
+
+              <Col>
+                <Form.Label className="label">
+                  <strong>Tanggal Mutakhir</strong>
+                </Form.Label>
+                <Form.Control
+                  type="date"
+                  className="input"
+                  value={tm_pkp}
+                  onChange={(e) => setTm_pkp(e.target.value)}
+                  placeholder="Tanggal Mutakhir"
+                />
+              </Col>
+            </Row>
+
+            <Row className="mt-3">
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Alamat</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={alamat_pkp}
+                  onChange={(e) => setAlamat_pkp(e.target.value)}
+                  placeholder="Alamat"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Kota/Kab</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={kota_pkp}
+                  onChange={(e) => setKota_pkp(e.target.value)}
+                  placeholder="Kota/Kab"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Kode Pos</strong>
+                </Form.Label>
+                <Form.Control
+                  type="number"
+                  className="input"
+                  value={kp_pkp}
+                  onChange={(e) => setKp_pkp(e.target.value)}
+                  placeholder="Kode Pos"
+                />
+              </Form.Group>
+            </Row>
+
+            <Row className="mb-3">
+              <Card.Header className="mt-3">
+                <h4>
+                  <strong>Pimpinan Instansi Pajak Daerah</strong>
+                </h4>
+              </Card.Header>
+              <Col>
+                <br />
+                <Form.Label className="label">
+                  <strong>Nama Kepala Instansi</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={nki_pkp}
+                  onChange={(e) => setNki_pkp(e.target.value)}
+                  placeholder="Nama Kepala Instansi"
+                />
+              </Col>
+            </Row>
+
+            <Row className="mt-3">
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Nomor Telepon</strong>
+                </Form.Label>
+                <Form.Control
+                  type="number"
+                  className="input"
+                  value={tlp_pkp}
+                  onChange={(e) => setTlp_pkp(e.target.value)}
+                  placeholder="Nomor Telepon"
+                />
+              </Form.Group>
+              <Form.Group as={Col}>
+                <Form.Label className="label">
+                  <strong>Alamat Email</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={email_pkp}
+                  onChange={(e) => setEmail_pkp(e.target.value)}
+                  placeholder="Alamat Email"
+                />
+              </Form.Group>
+            </Row>
+
+            <Row className="mt-3">
+              <Col>
+                <Form.Label className="label">
+                  <strong>Logo Pemerintah Daerah</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={lpd_pkp}
+                  onChange={(e) => setLpd_pkp(e.target.value)}
+                  placeholder="Logo Pemerintah Daerah"
+                />
+              </Col>
+            </Row>
+
+            <Row className="mt-3">
+              <Col>
+                <Form.Label className="label">
+                  <strong>Foto Kantor Instansi Pajak Daerah</strong>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  className="input"
+                  value={fkipd_pkp}
+                  onChange={(e) => setFkipd_pkp(e.target.value)}
+                  placeholder="Foto Kantor Instansi Pajak Daerah"
+                />
+              </Col>
+            </Row>
+
+            <Row className="mb-3 mt-3">
+              <Col>
+                <Button type="submit" className="button is-success">
+                  Update
+                </Button>
+              </Col>
+            </Row>
+          </Form>
+        </div>
       </div>
     </div>
   );

@@ -259,6 +259,10 @@ const AddPafe = () => {
             <Row className="mb-3 mt-3">
               <Col>
                 <Button type="submit" className="button is-success">
+                  Buat AFE
+                </Button>
+
+                <Button type="submit" className="button is-success">
                   Save
                 </Button>
               </Col>
