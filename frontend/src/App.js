@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import AddPkp from "./components/AddPkp";
@@ -11,13 +12,15 @@ import TabWajibPajak from "./components/TabWajibPajak";
 import TabDashboard from "./components/TabDashboard";
 import { List, Navbar } from "./components";
 import { Row, Col, Container } from "react-bootstrap";
+import Footer from "./components/Footer";
 
 function App() {
   return (
 
     <BrowserRouter>
       <Navbar />
-      <div className="mt-3">
+      <div className="page-container mt-3">
+        <div className="content-wrap">
         <Container fluid>
           <Row>
             <List />
@@ -44,8 +47,9 @@ function App() {
               </Row>
             </Col>
           </Row>
-
         </Container>
+        </div>
+        <Footer />
       </div>
     </BrowserRouter>
 
