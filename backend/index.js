@@ -4,6 +4,7 @@ import PkpRoute from "./routes/PkpRoute.js"
 import PwpRoute from "./routes/PwpRoute.js"
 import PplRoute from "./routes/PplRoute.js"
 import PafeRoute from "./routes/PafeRoute.js"
+import PoRoute from "./routes/PoRoute.js"
 
 const app = express();
 app.use(cors());
@@ -12,5 +13,6 @@ app.use(PkpRoute);
 app.use(PwpRoute);
 app.use(PplRoute);
 app.use(PafeRoute);
+app.use(PoRoute);
 
 app.listen(5000, ()=> console.log('Server up and running...'));

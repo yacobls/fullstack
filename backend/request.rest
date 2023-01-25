@@ -191,10 +191,10 @@ Content-Type: application/json
 
 {
     "nwp_pafe": "Joserizar",
-    "no_pafe": "TGN",
+    "no_pafe": "Outlet TGN",
     "oi_pafe": "17",
     "ja_pafe": "Tapping Box",
-    "afe_pafe": "Ts-108",
+    "afe_pafe": "TS-108",
     "ip_pafe": "192.168.38.1.",
     "ai_pafe": "171",
     "tr_pafe": "2023-01-24",
@@ -208,3 +208,58 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/pafe/1
+
+//PO
+
+###
+GET http://localhost:5000/po
+
+###
+GET http://localhost:5000/po/1
+
+###
+POST http://localhost:5000/po
+Content-Type: application/json
+
+{
+    "nwp_po": "Yacob",
+    "no_po": "Outlet COntoh",
+    "oi_po": "13",
+    "alamat_po": "Jl.Rawabelong No.45",
+    "kec_po": "Kodalen",
+    "kel_po": "Sinatens",
+    "kp_po": "17829",
+    "nama_pic_outlet": "Nama",
+    "email_pic_outlet": "email@gmail.com",
+    "tlp_pic_outlet": "081283827192",
+    "tr_po": "2023-01-24",
+    "tm_po": "2023-01-24",
+    "fio_po": "Foto",
+    "ftdo_po": "Foto",
+    "si_po": "Foto"
+}
+
+###
+PATCH http://localhost:5000/po/1
+Content-Type: application/json
+
+{
+    "nwp_po": "Yacob",
+    "no_po": "Outlet Contoh",
+    "oi_po": "13",
+    "alamat_po": "Jl.Rawabelong No.45",
+    "kec_po": "Kodalen",
+    "kel_po": "Sinatens",
+    "kp_po": "17829",
+    "nama_pic_outlet": "Nama",
+    "email_pic_outlet": "email@gmail.com",
+    "tlp_pic_outlet": "081283827192",
+    "tr_po": "2023-01-24",
+    "tm_po": "2023-01-24",
+    "fio_po": "Foto",
+    "ftdo_po": "Foto",
+    "si_po": "Foto"
+}
+
+###
+DELETE http://localhost:5000/po/1
