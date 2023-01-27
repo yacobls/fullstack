@@ -14,6 +14,7 @@ import TabDashboard from "./components/TabDashboard";
 import { List, Navbar } from "./components";
 import { Row, Col, Container } from "react-bootstrap";
 import Footer from "./components/Footer";
+import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
                   <Route path="addpafe" element={<AddPafe />} />
 
                   <Route path="addpo" element={<AddPo />} />
+
+                  <Route path="underconstruction" element={<UnderConstruction />} />
                 </Routes>
               </Row>
             </Col>

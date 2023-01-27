@@ -1,5 +1,6 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import UnderConstruction from './UnderConstruction';
 
 function JustifiedExample() {
   return (
@@ -13,7 +14,7 @@ function JustifiedExample() {
         {/* <Sonnet /> */}
       </Tab>
       <Tab eventKey="Transaksi" title="Transaksi">
-        {/* <Sonnet /> */}
+        <UnderConstruction/>{/* <Sonnet /> */}
       </Tab>
       <Tab eventKey="Perhatian Khusus" title="Perhatian Khusus">
         {/* <Sonnet /> */}

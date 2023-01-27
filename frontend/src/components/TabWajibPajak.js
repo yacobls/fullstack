@@ -2,6 +2,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import EditPwp from "./EditPwp";
 import AddPo from "./AddPo";
+import UnderConstruction from "./UnderConstruction";
 
 function JustifiedExample() {
     return (
@@ -18,7 +19,7 @@ function JustifiedExample() {
                 <AddPo />{/* <Sonnet /> */}
             </Tab>
             <Tab eventKey="Transaksi" title="Transaksi">
-                {/* <Sonnet /> */}
+                <UnderConstruction/>{/* <Sonnet /> */}
             </Tab>
         </Tabs>
     );

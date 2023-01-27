@@ -19,7 +19,7 @@ export default class Home extends Component {
                   <Button className="btn-home-menu" href="addppl">
                     Petugas Lapangan
                   </Button>
-                  <Button className="btn-home-menu" href="#">
+                  <Button className="btn-home-menu" href="underconstruction">
                     Persetujuan
                   </Button>
                 </ListGroup>

@@ -14,7 +14,7 @@ export default class List extends Component {
                     <Button className='btn-page-menu' href="editpkp/6">Kantor Pajak</Button>
                     <Button className='btn-page-menu' href="TabWajibPajak">Wajib Pajak</Button>
                     <Button className='btn-page-menu' href="AddPafe">Alat Fiskal Elektronik</Button>
-                    <Button className='btn-page-menu'>Pelaporan</Button>
+                    <Button className='btn-page-menu' href="underconstruction">Pelaporan</Button>
                 </ListGroup>
             </Col>
         )
