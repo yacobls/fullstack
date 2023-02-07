@@ -26,6 +26,6 @@ const Pwp = db.define('pwp', {
 
 export default Pwp;
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();

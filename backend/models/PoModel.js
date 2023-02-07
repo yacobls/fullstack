@@ -25,6 +25,6 @@ const Po = db.define('po', {
 
 export default Po;
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();

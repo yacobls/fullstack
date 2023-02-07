@@ -23,6 +23,6 @@ const Pkp = db.define('pkp', {
 
 export default Pkp;
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();

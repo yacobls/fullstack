@@ -24,6 +24,6 @@ const Pafe = db.define('pafe', {
 
 export default Pafe;
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();

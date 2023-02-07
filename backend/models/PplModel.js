@@ -23,6 +23,6 @@ const Ppl = db.define('ppl', {
 
 export default Ppl;
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();
